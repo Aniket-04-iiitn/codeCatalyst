@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Rooh Afza - Complete Page</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    body {
+      background-color: #fff;
+    }
+
+    .container {
+      width: 100%;
+      height: 100vh;
+      background: linear-gradient(135deg, #fcd000 50%, #ffffff 50%);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 80px;
+      position: relative;
+    }
+
+    .container img{
+      position: absolute;
+      bottom:0px;
+      right: 0px;
+    }
+    .text-section {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      height: 100%;
+    }
+
+    .text-box {
+      max-width: 800px;
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+    }
+
+    .text-box h2 {
+      font-size: 2.2rem;
+      color: #b00000;
+      margin-top: 40px;
+    }
+
+    .rooh {
+      font-size: 6rem;
+      color: #b00000;
+      font-weight: 700;
+    }
+
+    .text-box p {
+      font-size: 2.5rem;
+      color: #b00000;
+      margin: 0px 0 40px 250px;
+    }
+
+    .search-bar {
+      display: flex;
+      align-items: center;
+      background:white;
+      border: 3px solid black;
+      margin-left: 400px;
+      border-radius: 50px;
+      padding: 12px 25px;
+      width: 420px;
+    }
+
+    .search-bar input {
+      border: none;
+      outline: none;
+      font-size: 1.2rem;
+      flex: 1;
+      padding: 10px;
+      color: #b00000;
+    }
+
+    .search-bar .icon {
+      width: 24px;
+      height: 24px;
+      margin: 0 10px;
+      cursor: pointer;
+    }
+
+    .image-section img.main {
+      position:absolute;
+      bottom:0px;
+      right:0px;
+      max-height: 680px;
+      z-index: 3;
+    }
+
+    .image-section img.watermelon {
+      position:absolute;
+      left:10px;
+      bottom:10px;
+      height: 550px;
+      z-index: 3;
+    }
+
+    @media (max-width: 1000px) {
+      .container {
+        flex-direction: column;
+        padding: 40px 20px;
+        height: auto;
+      }
+
+      .text-section, .image-section {
+        width: 100%;
+        text-align: center;
+      }
+
+      .text-box, .search-bar {
+        margin: 0 auto;
+        align-items: center;
+      }
+
+      .image-section {
+        margin-top: 30px;
+      }
+
+      .product-title {
+        font-size: 36px;
+      }
+
+      .product {
+        flex-direction: column;
+      }
+
+      .reverse {
+        flex-direction: column;
+      }
+
+      .fusion-container {
+        flex-direction: column;
+      }
+    }
+
+    .section {
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    .section-title {
+      font-size: 24px;
+      margin-bottom: 40px;
+      text-transform: uppercase;
+      position: relative;
+    }
+
+    .section-title::before,
+    .section-title::after {
+      content: '';
+      display: inline-block;
+      width: 100px;
+      height: 1px;
+      background: #000;
+      margin: 0 10px;
+      vertical-align: middle;
+    }
+
+    .product {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 40px;
+    }
+
+    .reverse {
+      flex-direction: row-reverse;
+    }
+
+    .product-image img {
+      z-index: 3;
+      max-width: 300px;
+      height: auto;
+      display:block;
+
+    }
+    .product-image1 img {
+      position:relative;
+      top:-100px;
+      left: 750px;
+      z-index: 1;
+      max-width: 100%;
+      height: 50vh;
+      display:block;
+
+    }
+    .product-image2 img{
+      position:relative;
+      bottom:100px;
+      right: 550px;
+      z-index: 3;
+      max-width: 600px;
+      height: auto;
+      display:block;
+    }
+
+    .product-info {
+      max-width: 500px;
+      justify-content: center;
+      align-items: center;
+      height: 80vh;
+      
+    }
+
+    .product-title {
+      font-size: 72px;
+      margin: 0 0 20px;
+      font-weight: bold;
+    }
+
+    .product-title .highlight {
+      color: #3f2b5b;
+    }
+
+    .product-desc {
+      font-size: 18px;
+      margin-bottom: 20px;
+    }
+
+    .product-desc a {
+      color: #3f2b5b;
+      text-decoration: underline;
+    }
+
+    .btn {
+      background-color: #2d2546;
+      color: white;
+      padding: 12px 24px;
+      border: none;
+      border-radius: 20px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    .roohafza {
+      background: #f9f9f9;
+    }
+
+    .lassi {
+      background: #fbcf05;
+    }
+
+    /* Fusion and Glucose-D Side-by-Side Section */
+    .fusion-container {
+      display: flex;
+      height: 100vh;
+    }
+
+    .section1 {
+      flex: 1;
+      z-index: 2;
+      padding: 40px;
+      color: #1d0820;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      position: relative;
+    }
+
+    .left {
+      background-color: #fbc601;
+    }
+
+    .right {
+      background-color: #ffffff;
+    }
+
+    .text2 {
+      text-align: center;
+      font-size: 2.5rem;
+      font-weight: bold;
+      text-transform: uppercase;
+      text-decoration: underline;
+    }
+
+    .text3 {
+      text-align: center;
+      font-size: 1.2rem;
+      text-decoration: underline;
+      margin: 20px 0;
+    }
+
+    .button1 {
+      background-color: #2d203d;
+      color: white;
+      padding: 10px 25px;
+      border: none;
+      border-radius: 20px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .button1:hover {
+      background-color: #000;
+    }
+
+    .products1 {
+      position: absolute;
+      bottom: 0px;
+      margin-top: 30px;
+    }
+
+    .products1 img {
+      width: 600px;
+      max-width: 100%;
+    }
+
+    .text1 {
+      align-items: center;
+    }
+
+    .container1 {
+      position: relative;
+      display: flex;
+      height: 100vh;
+    }
+    .corner-image{
+      position: absolute;
+      bottom:0px;
+      right: 0px;
+      
+    }
+
+    .diagonal-bg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: #fbc601;
+      clip-path: polygon(100% 0, 100% 100%, 0 100%);
+      z-index: 0;
+    }
+
+    .diagonal-bg::after {
+      content: "";
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      width: 50%;
+      height: 100%;
+      background-image: url('ru2.png');
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: right bottom;
+    }
+
+    .left-section {
+      width: 100%;
+      padding: 60px;
+      display: flex;
+      flex-direction: column;
+      z-index: 1;
+      position: relative;
+    }
+
+    .left-section h2 {
+      text-align: center;
+      font-weight: bold;
+      letter-spacing: 1px;
+      font-size: 1.5rem;
+      position: relative;
+    }
+
+    .left-section h2::before,
+    .left-section h2::after {
+      content: "";
+      display: inline-block;
+      width: 80px;
+      height: 2px;
+      background-color: black;
+      vertical-align: middle;
+      margin: 0 20px;
+    }
+
+    .left-section p {
+      font-size: 1.2rem;
+      margin-top: 30px;
+      color: #111;
+      max-width: 600px;
+    }
+
+    .contact {
+      margin-top: auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      padding-bottom: 20px;
+    }
+
+    .contact h3 {
+      font-size: 2rem;
+      color: #c30000;
+      margin-bottom: 10px;
+    }
+
+    .contact-info {
+      margin-top: 10px;
+      font-size: 1.1rem;
+    }
+
+    .contact-info div {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 10px 0;
+      color: #c30000;
+    }
+
+    .contact-info img.icon {
+      width: 24px;
+      margin-right: 10px;
+    }
+
+    .social-icons {
+      display: flex;
+      margin-top: 20px;
+      gap: 15px;
+      justify-content: center;
+    }
+
+    .social-icons img {
+      width: 35px;
+      height: 35px;
+      border-radius: 50%;
+    }
+
+    .corner-image {
+      height: 250px;
+      z-index: 2;
+    }
+  </style>
+</head>
+<body>
+
+<!-- Hero Section -->
+<div class="container">
+  <div class="text-section">
+    <div class="text-box">
+      <h2>New</h2>
+      <div class="rooh">Rooh Afza</div>
+      <p>with modern elegance</p>
+      <div class="search-bar">
+        <img src="https://img.icons8.com/ios-filled/50/000000/search--v1.png" class="icon" alt="search"/>
+        <input type="text" placeholder="Search here..." />
+        <img src="https://img.icons8.com/ios-filled/50/000000/microphone.png" class="icon" alt="mic"/>
+      </div>
+    </div>
+  </div>
+  <div class="image-section">
+    <img src="img1.png" class="main" alt="Rooh Afza Bottle"/>
+    <img src="img2.png" class="watermelon" alt="Watermelon"/>
+  </div>
+</div>
+
+<!-- Rooh Afza Product Section -->
+<section class="section roohafza">
+  <h2 class="section-title">Our Products</h2>
+  <div class="product">
+    <div class="product-info">
+      <h1 class="product-title">Rooh Afza</h1>
+      <div class="product-image">
+        <img src="img3.png" alt="RoohAfza Bottle">
+      </div>
+      <p class="product-desc">
+        RoohAfza is a fruit-filled, friendly punch which is a perfect treat on a hot day.
+      </p>
+      <button class="btn">View More</button>
+    </div>
+  </div>
+</section>
+
+<!-- Hamdard Lassi Section -->
+<section class="section lassi">
+  <div class="product reverse">
+    <div class="product-info">
+      <div class="product-image2">
+        <img src="img8.png" alt="Strawberry">
+      </div>
+      <h1 class="product-title">Hamdard Lassi</h1>
+      <p class="product-desc">
+        <a href="#">Best of both worlds in Hamdard Lassi, goodness of curd & RoohAfza in an easy to go tetra pack.</a>
+      </p>
+      <button class="btn">View More</button>
+      <div class="product-image1">
+        <img src="img6.png" alt="Hamdard Lassi">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Fusion and Glucose-D -->
+<div class="fusion-container">
+  <div class="section1 left">
+    <div class="text1">
+      <h1 class="text2">Rooh Afza<br>Fusion</h1>
+      <p class="text3">RoohAfza Fusion is a unique combination of RoohAfza with pure fruit juice.</p>
+      <button class="button1" onclick="alert('RoohAfza Fusion clicked')">View More</button>
+    </div>
+    <div class="products1">
+      <img src="img4.png" alt="Rooh Afza Fusion">
+    </div>
+  </div>
+
+  <div class="section1 right">
+    <div class="text1">
+      <h1 class="text2">Hamdard<br>Glucose-D</h1>
+      <p class="text3">Get your daily dose of instant energy with Hamdard Glucose-D.</p>
+      <button class="button1" onclick="alert('Hamdard Glucose-D clicked')">View More</button>
+    </div>
+    <div class="products1">
+      <img src="img5.png" alt="Hamdard Glucose-D">
+    </div>
+  </div>
+</div>
+
+<div class="container1">
+  <div class="diagonal-bg"></div>
+
+  <div class="left-section">
+    <h2>ABOUT US</h2>
+    <p>
+      Hamdard is committed to making quality healthcare an affordable and accessible reality throughout the world.
+    </p>
+    <p>
+      To achieve this commitment, Hamdard has established core values and lives by its philosophy that provides the foundations for all of our products and services.
+    </p>
+
+    <div class="contact">
+      <h3>Contact Us</h3>
+      <div class="contact-info">
+        <div><img src="https://img.icons8.com/ios-filled/50/000000/phone.png" class="icon" alt="Phone" /> +91 9999999999</div>
+        <div><img src="https://img.icons8.com/ios-filled/50/000000/email.png" class="icon" alt="Email" /> roohafzaonline@gmail.com</div>
+      </div>
+      <div class="social-icons">
+        <img src="https://img.icons8.com/ios-glyphs/30/twitter--v1.png" alt="X (Twitter)">
+        <img src="https://img.icons8.com/ios-glyphs/30/instagram-new.png" alt="Instagram">
+        <img src="https://img.icons8.com/ios-glyphs/30/facebook-new.png" alt="Facebook">
+      </div>
+    </div>
+  </div>
+  <img src="img7.png" alt="Corner Image" class="corner-image" />
+</div>
+
+
+
+</body>
+</html>
